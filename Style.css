@@ -1,0 +1,78 @@
+body{
+    background-image: url("pariwisata/img/candi\ borobudur.jpg");
+    background-size: 100% 100%;
+    margin: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.menu{
+    font-family: tahoma;
+    font-weight: bold;
+    height: 70px;
+    width: 100%;
+    background: #1794c5;
+    font-size: 20px;
+}
+
+label{
+    font-family: sans-serif;
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 5px;
+    float: left;
+}
+
+.menu ul{
+    margin: 0px;
+    padding: 5px;
+    background: none;
+    display: block;
+    float: right;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c9b7b7;
+}
+
+.menu ul li a:hover{
+    display: block;
+    color: rgb(0, 100, 128);
+    background: #fefefe;
+    box-shadow: inset 0px 0px 5px #ffffff;
+}
+
+.menu ul li .dropdown{
+    display: none;
+}
+
+.menu ul li:hover .dropdown{
+    display: block;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    padding: 10px;
+}
+
+.menu ul li:hover .dropdown li{
+    display: block;
+}
+
+.menu ul li:hover .dropdown li a{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.menu ul li:hover .dropdown li a:hover{
+    background: #ffffff;
+    box-shadow: inset 0px 0px 5px #a9a0a0;
+}
