@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email - Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        :root {
+            --hanok-red: #CD2C2C;
+            --deep-blue: #0A174E;
+            --gold-accent: #D4AF37;
+            --warm-beige: #F5F0E6;
+            --dark-charcoal: #333333;
+            --soft-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .menu {
+            background: var(--deep-blue);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu label {
+            color: var(--soft-white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            position: relative;
+        }
+
+        .menu ul li a {
+            color: var(--soft-white);
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .menu ul li a:hover {
+            background-color: rgba(241, 196, 15, 0.15);
+            color: var(--gold-accent);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: var(--deep-blue);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .menu ul li:hover .dropdown {
+            display: block;
+        }
+
+
+        .email-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .email-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 50px;
+        }
+
+        .email-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .email-intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .email-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold-accent);
+        }
+
+        .email-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .email-icon {
+            color: var(--hanok-red);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .email-card h2 {
+            color: var(--deep-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .email-card p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .email-address {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--hanok-red);
+            word-break: break-all;
+        }
+
+        .contact-note {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            color: var(--dark-charcoal);
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .email-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .email-content {
+                padding: 0 20px 30px;
+            }
+            
+            .email-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        footer {
+                background: #0A174E;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 30px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall-room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="email-header">
+        <h1>Hubungi Kami via Email</h1>
+    </div>
+
+    <div class="email-content">
+        <div class="email-intro">
+            <p>Untuk respon yang lebih cepat, silakan gunakan alamat email berikut sesuai dengan kebutuhan Anda. Kami berusaha membalas semua pesan email dalam waktu 24 jam.</p>
+        </div>
+        
+        <div class="email-grid">
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h2>Reservasi Kamar</h2>
+                <p>Untuk pemesanan kamar, perubahan reservasi, atau pertanyaan tentang ketersediaan kamar:</p>
+                <p class="email-address">reservasi@amantiseoul.com</p>
+            </div>
+            
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h2>Informasi Umum</h2>
+                <p>Untuk pertanyaan umum tentang hotel, fasilitas, atau kebijakan:</p>
+                <p class="email-address">info@amantiseoul.com</p>
+            </div>
+
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h2>Event & Meeting</h2>
+                <p>Untuk penyewaan ruang meeting, konferensi, atau acara khusus:</p>
+                <p class="email-address">events@amantiseoul.com</p>
+            </div>
+            
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h2>Restaurant</h2>
+                <p>Untuk reservasi restaurant, menu khusus, atau pertanyaan tentang katering:</p>
+                <p class="email-address">restaurant@amantiseoul.com</p>
+            </div>
+            
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2>Group Booking</h2>
+                <p>Untuk reservasi grup (lebih dari 5 kamar) atau paket khusus:</p>
+                <p class="email-address">groups@amantiseoul.com</p>
+            </div>
+            
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h2>Customer Service</h2>
+                <p>Untuk keluhan, saran, atau masukan tentang layanan kami:</p>
+                <p class="email-address">customerservice@amantiseoul.com</p>
+            </div>
+        </div>
+        
+        <div class="contact-note">
+            <p>Untuk keadaan darurat, silakan hubungi kami melalui telepon di +82 2-1234-5678</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+        <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fasilitas Lainnya - Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        :root {
+            --hanok-red: #CD2C2C;
+            --deep-blue: #0A174E;
+            --gold-accent: #D4AF37;
+            --warm-beige: #F5F0E6;
+            --dark-charcoal: #333333;
+            --soft-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .facility-header {
+            background: linear-gradient(rgba(10, 23, 78, 0.7), rgba(10, 23, 78, 0.7)), 
+                        url('img/facility-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--soft-white);
+            padding: 0 20px;
+            margin-bottom: 50px;
+        }
+
+        .facility-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .facility-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+        }
+
+        .facility-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .section-title {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--hanok-red);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-accent);
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .facility-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .facility-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--hanok-red);
+        }
+
+        .facility-details {
+            padding: 30px;
+        }
+
+        .facility-title {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .facility-icon {
+            color: var(--hanok-red);
+            font-size: 1.5rem;
+        }
+
+        .facility-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .facility-features li {
+            padding: 10px 0;
+            position: relative;
+            padding-left: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .facility-features li:before {
+            content: "✓";
+            color: var(--hanok-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .facility-hours {
+            background: var(--warm-beige);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            color: var(--deep-blue);
+        }
+
+        @media (max-width: 768px) {
+            .facility-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .facility-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        footer {
+                background: #0A174E;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 30px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall-room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="facility-header">
+        <h1>Fasilitas Unggulan</h1>
+        <p>Nikmati berbagai fasilitas premium yang kami sediakan untuk kenyamanan Anda</p>
+    </div>
+
+    <div class="facility-content">
+        <div class="section-title">
+            <h2>Fasilitas Lainnya</h2>
+        </div>
+
+        <div class="facility-grid">
+            <div class="facility-card">
+                <img src="img/kolam renang.jpg" alt="Kolam Renang" class="facility-image">
+                <div class="facility-details">
+                    <h3 class="facility-title">
+                        <i class="fas fa-swimming-pool facility-icon"></i>
+                        Kolam Renang
+                    </h3>
+                    <p>Kolam renang outdoor dengan pemandangan kota yang menakjubkan</p>
+                    <ul class="facility-features">
+                        <li>Area dewasa dan anak-anak</li>
+                        <li>Pool bar dengan minuman segar</li>
+                        <li>Area berjemur dengan sunbed premium</li>
+                        <li>Pelayanan handuk dan perlengkapan renang</li>
+                    </ul>
+                    <div class="facility-hours">
+                        <strong>Jam Buka:</strong> 06.00 - 22.00
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="img/pusat kebugaran.jpg" alt="Fitness Center" class="facility-image">
+                <div class="facility-details">
+                    <h3 class="facility-title">
+                        <i class="fas fa-dumbbell facility-icon"></i>
+                        Fitness Center
+                    </h3>
+                    <p>Pusat kebugaran dengan peralatan modern dan pelayanan profesional</p>
+                    <ul class="facility-features">
+                        <li>Cardio equipment teknologi terbaru</li>
+                        <li>Weight training area lengkap</li>
+                        <li>Personal trainer (on request)</li>
+                        <li>Kelas fitness harian (yoga, pilates, dll)</li>
+                    </ul>
+                    <div class="facility-hours">
+                        <strong>Jam Buka:</strong> 24 jam untuk tamu hotel
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="img/rooftop.jpg" alt="Rooftop Lounge" class="facility-image">
+                <div class="facility-details">
+                    <h3 class="facility-title">
+                        <i class="fas fa-cocktail facility-icon"></i>
+                        Rooftop Lounge
+                    </h3>
+                    <p>Area rooftop eksklusif dengan pemandangan kota Seoul</p>
+                    <ul class="facility-features">
+                        <li>Lounge area dengan seating nyaman</li>
+                        <li>Sky bar dengan menu cocktail spesial</li>
+                        <li>Tempat perfect untuk sunset viewing</li>
+                        <li>Live music setiap akhir pekan</li>
+                    </ul>
+                    <div class="facility-hours">
+                        <strong>Jam Buka:</strong> 16.00 - 01.00
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-card">
+                <img src="img/parkiran.jpg" alt="Area Parkir" class="facility-image">
+                <div class="facility-details">
+                    <h3 class="facility-title">
+                        <i class="fas fa-parking facility-icon"></i>
+                        Area Parkir
+                    </h3>
+                    <p>Fasilitas parkir yang aman dan nyaman untuk kendaraan Anda</p>
+                    <ul class="facility-features">
+                        <li>Parkir bawah tanah dengan kapasitas besar</li>
+                        <li>Valet parking service 24 jam</li>
+                        <li>Area parkir khusus untuk tamu difabel</li>
+                        <li>Sistem keamanan CCTV 24/7</li>
+                    </ul>
+                    <div class="facility-hours">
+                        <strong>Tarif:</strong> Gratis untuk tamu menginap
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+        <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>

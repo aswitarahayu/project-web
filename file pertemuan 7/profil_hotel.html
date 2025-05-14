@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profil Hotel - Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        :root {
+            --hanok-red: #CD2C2C;
+            --deep-blue: #0A174E;
+            --gold-accent: #D4AF37;
+            --warm-beige: #F5F0E6;
+            --dark-charcoal: #333333;
+            --soft-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .menu {
+            background: var(--deep-blue);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu label {
+            color: var(--soft-white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            position: relative;
+        }
+
+        .menu ul li a {
+            color: var(--soft-white);
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .menu ul li a:hover {
+            background-color: rgba(241, 196, 15, 0.15);
+            color: var(--gold-accent);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: var(--deep-blue);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .menu ul li:hover .dropdown {
+            display: block;
+        }
+
+        .profile-header {
+            background: linear-gradient(rgba(10, 23, 78, 0.7), rgba(10, 23, 78, 0.7)), 
+                        url('img/hotel-exterior.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--soft-white);
+            margin-bottom: 50px;
+        }
+
+        .profile-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .profile-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 50px;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--hanok-red);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-accent);
+        }
+
+        .profile-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: var(--warm-beige);
+            border-left: 4px solid var(--gold-accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            color: var(--hanok-red);
+            font-size: 1.8rem;
+            margin-top: 5px;
+        }
+
+        .feature-text h3 {
+            color: var(--deep-blue);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .profile-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-section {
+                padding: 25px;
+            }
+        }
+        footer {
+                background: #0A174E;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 30px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall_room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="profile-header">
+        <h1>Profil Hotel</h1>
+    </div>
+
+    <div class="profile-content">
+        <div class="profile-section">
+            <h2 class="section-title">Amanti Hotel Seoul</h2>
+            
+            <p class="profile-text">Amanti Hotel Seoul adalah hotel bintang 4 yang terletak di distrik Hongdae, Seoul, Korea Selatan. Dengan jarak 5,3 km dari pusat kota, hotel ini menawarkan lokasi strategis bagi para wisatawan yang ingin menjelajahi keindahan Seoul. Dibangun pada tahun 2016 dan direnovasi dengan standar internasional, kami menyediakan fasilitas modern dan kenyamanan tak tertandingi.</p>
+            
+            <div class="highlight-box">
+                <p>Dengan total 150 kamar yang tersedia, Amanti Hotel Seoul menyediakan akomodasi yang nyaman dan mewah bagi para tamu. Setiap kamar dirancang dengan gaya yang elegan dan dilengkapi dengan fasilitas modern.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-building feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Tahun Berdiri</h3>
+                        <p>Didirikan pada tahun 2016 dengan desain modern dan sentuhan tradisional Korea</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-map-marked-alt feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Lokasi Strategis</h3>
+                        <p>Berada di jantung distrik Hongdae, dekat dengan pusat bisnis dan hiburan Seoul</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-concierge-bell feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Pelayanan</h3>
+                        <p>Staff profesional siap melayani 24 jam dengan standar internasional</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-bed feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Kamar</h3>
+                        <p>150 kamar dengan desain elegan dan fasilitas modern lengkap</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="profile-text">Waktu check-in di Amanti Hotel Seoul dimulai dari pukul 15:00, sementara waktu check-out hingga pukul 12:00. Hotel ini memiliki kebijakan khusus untuk anak-anak dimana anak-anak tidak diizinkan menginap secara gratis dan mungkin dikenakan biaya tambahan.</p>
+            
+            <p class="profile-text">Dengan pelayanan ramah dan profesional, staf hotel siap membantu memastikan masa menginap Anda berjalan dengan lancar. Nikmati pengalaman menginap yang luar biasa di Amanti Hotel Seoul saat Anda berada di Seoul, Korea Selatan.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+        <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>

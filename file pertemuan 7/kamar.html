@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: #f5f0e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu {
+            background: #0A174E;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .menu label {
+            color: #F8F8F8;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 0 30px;
+            letter-spacing: 1px;
+        }
+        
+        .room-promotion {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .room-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 4px solid #CD2C2C;
+        }
+        
+        .room-details {
+            padding: 25px;
+        }
+        
+        .room-type {
+            color: #0A174E;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .room-price {
+            color: #CD2C2C;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        
+        .room-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .room-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .room-features li:before {
+            content: "✓";
+            color: #CD2C2C;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .book-btn {
+            background: #CD2C2C;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .book-btn:hover {
+            background: #a82222;
+        }
+        
+        
+        .page-header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(rgba(10, 23, 78, 0.8), rgba(10, 23, 78, 0.8)), url('img/hotel-banner.jpg');
+            background-size: cover;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        footer {
+            background: #0A174E;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall-room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Penginapan Mewah di Seoul</h1>
+        <p>Nikmati kenyamanan terbaik dengan kamar-kamar eksklusif kami yang dirancang untuk memanjakan Anda</p>
+    </div>
+
+    <div class="room-promotion">
+        <div class="room-grid">
+            <div class="room-card">
+                <img src="img/Standard Twin.jpg" alt="Standard Twin" class="room-image">
+                <div class="room-details">
+                    <h2 class="room-type">Standard Twin</h2>
+                    <p class="room-price">Mulai dari Rp 2.100.000/malam</p>
+                    <ul class="room-features">
+                        <li>Luas 23 m²</li>
+                        <li>2 Kasur Single</li>
+                        <li>Fasilitas lengkap</li>
+                        <li>Sarapan gratis</li>
+                    </ul>
+                    <button class="book-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+            
+            <div class="room-card">
+                <img src="img/standard double.jpg" alt="Standard Double" class="room-image">
+                <div class="room-details">
+                    <h2 class="room-type">Standard Double</h2>
+                    <p class="room-price">Mulai dari Rp 2.150.000/malam</p>
+                    <ul class="room-features">
+                        <li>Luas 23 m²</li>
+                        <li>1 Kasur Double</li>
+                        <li>Fasilitas lengkap</li>
+                        <li>Sarapan gratis</li>
+                    </ul>
+                    <button class="book-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="img/suite amanti.jpg" alt="Suite Amanti" class="room-image">
+                <div class="room-details">
+                    <h2 class="room-type">Suite Amanti</h2>
+                    <p class="room-price">Mulai dari Rp 3.500.000/malam</p>
+                    <ul class="room-features">
+                        <li>Luas 43 m²</li>
+                        <li>Kasur King Size</li>
+                        <li>Lounge pribadi</li>
+                        <li>Minibar gratis</li>
+                    </ul>
+                    <button class="book-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="img/suite twin.jpg" alt="Suite Twin" class="room-image">
+                <div class="room-details">
+                    <h2 class="room-type">Suite Twin</h2>
+                    <p class="room-price">Mulai dari Rp 4.010.000/malam</p>
+                    <ul class="room-features">
+                        <li>Luas 43 m²</li>
+                        <li>2 Kasur Double</li>
+                        <li>Lounge pribadi</li>
+                        <li>Akses klub eksekutif</li>
+                    </ul>
+                    <button class="book-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+         <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>

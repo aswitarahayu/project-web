@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tentang Kami - Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        :root {
+            --hanok-red: #CD2C2C;
+            --deep-blue: #0A174E;
+            --gold-accent: #D4AF37;
+            --warm-beige: #F5F0E6;
+            --dark-charcoal: #333333;
+            --soft-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        .menu {
+            background: var(--deep-blue);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu label {
+            color: var(--soft-white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            position: relative;
+        }
+
+        .menu ul li a {
+            color: var(--soft-white);
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .menu ul li a:hover {
+            background-color: rgba(241, 196, 15, 0.15);
+            color: var(--gold-accent);
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: var(--deep-blue);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .menu ul li:hover .dropdown {
+            display: block;
+        }
+
+        .about-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 50px;
+        }
+
+        .about-section {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--hanok-red);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-accent);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background: var(--warm-beige);
+            border-left: 4px solid var(--gold-accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            color: var(--hanok-red);
+            font-size: 1.8rem;
+            margin-top: 5px;
+        }
+
+        .feature-text h3 {
+            color: var(--deep-blue);
+            margin-bottom: 10px;
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-section {
+                padding: 25px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        footer {
+                background: #0A174E;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 30px;
+            }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall-room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="about-header">
+        <h1>Tentang Kami</h1>
+    </div>
+
+    <div class="about-content">
+        <div class="about-section">
+            <h2 class="section-title">Hotel Amanti Seoul</h2>
+            
+            <img src="img/amanti-hotel-seoul.jpg" alt="Bangunan Hotel Amanti Seoul" class="hotel-image">
+            
+            <p class="about-text">Hotel bintang 4 mewah terbaik di Korea, One & Only Amanti Hotel Seoul berlokasi strategis 500 m dari Pintu Keluar 1 Stasiun Subway Universitas Hongik (Jalur 2, Airport Railroad, dan Jalur Gyeongui-Jungang). Amanti Seoul menawarkan pengalaman menginap yang tak terlupakan dengan kolam renang outdoor musiman dan pusat kebugaran dengan akses gratis. WiFi tersedia di seluruh area hotel untuk kenyamanan tamu.</p>
+            
+            <div class="highlight-box">
+                <p>Dilengkapi dengan lantai kayu keras, setiap kamar di Amanti memiliki jendela panorama, TV kabel layar datar, dan ketel listrik. Kamar mandi pribadi dilengkapi dengan bathtub dan shower mewah. Jubah mandi, sandal, dan perlengkapan mandi gratis disediakan untuk kenyamanan Anda.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-map-marker-alt feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Lokasi Strategis</h3>
+                        <p>Berada di jantung Mapo-Gu, dekat dengan kawasan Hongdae yang terkenal dengan kehidupan malam dan seninya</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-concierge-bell feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Layanan Unggulan</h3>
+                        <p>Layanan meja depan 24 jam termasuk penukaran mata uang dan penyimpanan barang bawaan</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-utensils feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Kuliner</h3>
+                        <p>Restoran dengan menu internasional dan Korea, serta kedai kopi/kafe yang nyaman</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-swimming-pool feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Fasilitas</h3>
+                        <p>Kolam renang outdoor musiman, pusat kebugaran modern, dan taman atap dengan pemandangan kota</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="about-text">Hotel ini menawarkan layanan meja depan 24 jam termasuk penukaran mata uang dan penyimpanan barang bawaan. Para tamu dapat berjalan-jalan santai di taman atap sambil menikmati pemandangan cakrawala Seoul. Pusat bisnis di lokasi buka 24 jam untuk kebutuhan bisnis Anda.</p>
+            
+            <p class="about-text">Dari hotel, kawasan Hongdae yang ramai dapat dicapai dalam beberapa menit berjalan kaki. Balai Kota Seoul dan Istana Deoksugung dapat dicapai dalam 14 menit perjalanan kereta bawah tanah di Jalur 2. Bandara Internasional Incheon dapat dicapai dalam satu jam perjalanan kereta bawah tanah di Jalur Airport Railroad.</p>
+            
+            <div class="highlight-box">
+                <p>Mapo-Gu adalah pilihan yang tepat bagi wisatawan yang tertarik dengan kehidupan malam, makanan lezat, dan makanan kaki lima. Hotel Amanti Seoul dinilai memiliki nilai terbaik di Seoul! Tamu mendapatkan lebih banyak untuk uang yang mereka keluarkan jika dibandingkan dengan properti lain di kota ini.</p>
+            </div>
+        </div>
+        
+        <div class="about-section">
+            <h2 class="section-title">Fasilitas & Layanan</h2>
+            
+            <p class="about-text">Selain restoran, hotel bebas-rokok ini memiliki klub kesehatan dan bar di tepi kolam renang. WiFi gratis tersedia di seluruh area umum dan parkir mandiri gratis juga disediakan. Fasilitas lainnya termasuk:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-wifi feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>WiFi Gratis</h3>
+                        <p>Akses internet cepat di seluruh area hotel</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-business-time feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Pusat Bisnis</h3>
+                        <p>Fasilitas bisnis lengkap buka 24 jam</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-swimmer feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Kolam Renang</h3>
+                        <p>Kolam renang outdoor musiman dengan view kota</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-dumbbell feature-icon"></i>
+                    <div class="feature-text">
+                        <h3>Pusat Kebugaran</h3>
+                        <p>Perlengkapan fitness modern untuk kesehatan tamu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="about-text">Semua 150 kamar kami menawarkan WiFi gratis, lemari es, dan TV layar datar dengan saluran kabel. Air minum kemasan gratis, pengering rambut, dan brankas adalah beberapa fasilitas standar yang akan ditemukan tamu di setiap kamar.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+        <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>

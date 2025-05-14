@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hall & Meeting Rooms - Hotel Amanti Seoul</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        :root {
+            --hanok-red: #CD2C2C;
+            --deep-blue: #0A174E;
+            --gold-accent: #D4AF37;
+            --warm-beige: #F5F0E6;
+            --dark-charcoal: #333333;
+            --soft-white: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--warm-beige);
+            color: var(--dark-charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .event-header {
+            background: linear-gradient(rgba(10, 23, 78, 0.7), rgba(10, 23, 78, 0.7)), 
+                        url('img/event-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--soft-white);
+            padding: 0 20px;
+            margin-bottom: 50px;
+        }
+
+        .event-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .event-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+        }
+        .event-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .section-title {
+            color: var(--deep-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--hanok-red);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold-accent);
+        }
+        .room-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .room-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--hanok-red);
+        }
+
+        .room-details {
+            padding: 30px;
+        }
+
+        .room-title {
+            color: var(--deep-blue);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .room-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .room-features li {
+            padding: 10px 0;
+            position: relative;
+            padding-left: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .room-features li:before {
+            content: "✓";
+            color: var(--hanok-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .room-price {
+            color: var(--hanok-red);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .booking-section {
+            background: var(--deep-blue);
+            color: white;
+            padding: 50px;
+            border-radius: 10px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .booking-section h2 {
+            color: var(--gold-accent);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--gold-accent);
+        }
+
+        @media (max-width: 768px) {
+            .event-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .room-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        footer {
+                background: #0A174E;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 30px;
+            }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <nav class="menu">
+        <label>Hotel Amanti Seoul</label>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Profil</a>
+                <ul class="dropdown">
+                    <li><a href="profil_hotel.html">Profil Hotel</a></li>
+                    <li><a href="profil_pemogram.html">Profil Pemogram</a></li>
+                </ul>
+            </li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li>
+                <a href="#">Fasilitas</a>
+                <ul class="dropdown">
+                    <li><a href="kamar.html">Kamar</a></li>
+                    <li><a href="restaurant.html">Restaurant</a></li>
+                    <li><a href="hall-room.html">Hall Room</a></li>
+                    <li><a href="fasilitas-lain.html">Fasilitas Lain</a></li>
+                </ul>
+            </li>
+            <li><a href="lokasi.html">Lokasi</a></li>
+            <li>
+                <a href="#">Kontak</a>
+                <ul class="dropdown">
+                    <li><a href="kontak.html">Form Kontak</a></li>
+                    <li><a href="email.html">Email</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="event-header">
+        <h1>Hall & Ruang Meeting</h1>
+        <p>Tempat sempurna untuk acara bisnis dan perayaan spesial Anda</p>
+    </div>
+
+    <div class="event-content">
+        <div class="section-title">
+            <h2>Fasilitas Acara Kami</h2>
+        </div>
+
+        <div class="room-container">
+            <div class="room-card">
+                <img src="img/hallroom2.jpg" alt="Grand Ballroom" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-title">Grand Ballroom</h3>
+                    <ul class="room-features">
+                        <li><strong>Kapasitas:</strong> Hingga 200 orang</li>
+                        <li><strong>Fasilitas:</strong> Panggung profesional, sistem audio visual lengkap</li>
+                        <li><strong>Layanan:</strong> Catering service, dekorasi, tim support acara</li>
+                        <li><strong>Ukuran:</strong> 500 m² dengan langit-langit tinggi</li>
+                    </ul>
+                    <p class="room-price">Mulai dari Rp 15.000.000/hari</p>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <img src="img/hallroom3.jpg" alt="Meeting Room" class="room-image">
+                <div class="room-details">
+                    <h3 class="room-title">Meeting Room</h3>
+                    <ul class="room-features">
+                        <li><strong>Kapasitas:</strong> 20-50 orang</li>
+                        <li><strong>Fasilitas:</strong> LCD projector, whiteboard, flipchart</li>
+                        <li><strong>Layanan:</strong> WiFi high-speed, coffee break, notulensi</li>
+                        <li><strong>Setup:</strong> Classroom, theater, atau boardroom style</li>
+                    </ul>
+                    <p class="room-price">Mulai dari Rp 3.000.000/hari</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-section">
+            <h2>Informasi Booking</h2>
+            <p>Kami siap membantu Anda merencanakan acara yang sempurna. Hubungi tim acara kami untuk informasi lebih lanjut:</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Telepon</h3>
+                        <p> +62895802570603</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>aswitarahayu1412@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Jam Kerja</h3>
+                        <p>Senin-Minggu, 08.00-20.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hotel Amanti Seoul. All Rights Reserved.</p>
+        <p>123 World Cup Buk-Ro Mapo-Gu, Seoul, Hongdae, Seoul, Korea Selatan</p>
+    </footer>
+</body>
+</html>
